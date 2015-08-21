@@ -154,6 +154,8 @@ function ast_dump($ast, int $options = 0) : string {
             if (isset($ast->endLineno)) {
                 $result .= "-$ast->endLineno";
             }
+            $result .= " $ast->firstcol";
+            $result .= ",$ast->lastcol";
         }
 
         if (ast\kind_uses_flags($ast->kind)) {

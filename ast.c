@@ -179,8 +179,15 @@ static void ast_to_zval(zval *zv, zend_ast *ast) {
 	ZVAL_LONG(&tmp_zv, ast->kind);
 	ast_update_property(zv, AST_G(str_kind), &tmp_zv, AST_CACHE_SLOT_KIND);
 
-	ZVAL_LONG(&tmp_zv, zend_ast_get_lineno(ast));
+	ZVAL_LONG(&tmp_zv, zend_ast_get_first_lineno(ast));
 	ast_update_property(zv, AST_G(str_lineno), &tmp_zv, AST_CACHE_SLOT_LINENO);
+
+	ZVAL_LONG(&tmp_zv, zend_ast_get_first_column(ast));
+	ast_update_property(zv, AST_G(str_firstcol), &tmp_zv, NULL);
+
+	ZVAL_LONG(&tmp_zv, zend_ast_get_last_column(ast));
+	ast_update_property(zv, AST_G(str_lastcol), &tmp_zv, NULL);
+
 
 	if (is_decl) {
 		zend_ast_decl *decl = (zend_ast_decl *) ast;
@@ -377,6 +384,8 @@ PHP_MINIT_FUNCTION(ast) {
 	ast_init_string_global(lineno);
 	ast_init_string_global(children);
 	ast_init_string_global(endLineno);
+	ast_init_string_global(firstcol);
+	ast_init_string_global(lastcol);
 	ast_init_string_global(docComment);
 
 	ast_register_kind_constants(INIT_FUNC_ARGS_PASSTHRU);
@@ -464,6 +473,8 @@ PHP_MINIT_FUNCTION(ast) {
 		ast_declare_property(ast_node_ce, AST_G(str_kind), &zv);
 		ast_declare_property(ast_node_ce, AST_G(str_flags), &zv);
 		ast_declare_property(ast_node_ce, AST_G(str_lineno), &zv);
+		ast_declare_property(ast_node_ce, AST_G(str_firstcol), &zv);
+		ast_declare_property(ast_node_ce, AST_G(str_lastcol), &zv);
 		ast_declare_property(ast_node_ce, AST_G(str_children), &zv);
 	}
 
@@ -489,6 +500,8 @@ PHP_MSHUTDOWN_FUNCTION(ast) {
 	zend_string_release(AST_G(str_children));
 	zend_string_release(AST_G(str_docComment));
 	zend_string_release(AST_G(str_endLineno));
+	zend_string_release(AST_G(str_firstcol));
+	zend_string_release(AST_G(str_lastcol));
 
 	return SUCCESS;
 }

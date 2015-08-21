@@ -27,6 +27,8 @@ ZEND_BEGIN_MODULE_GLOBALS(ast)
 	zend_string *str_name;
 	zend_string *str_flags;
 	zend_string *str_lineno;
+	zend_string *str_firstcol;
+	zend_string *str_lastcol;
 	zend_string *str_children;
 	zend_string *str_docComment;
 	zend_string *str_endLineno;
