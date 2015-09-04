@@ -26,18 +26,18 @@ echo ast_dump($ast, AST_DUMP_LINENOS);
 
 ?>
 --EXPECT--
-AST_STMT_LIST @ 1
-    0: AST_FUNC_DECL @ 2-9
+AST_STMT_LIST @ 1:1 9:1
+    0: AST_FUNC_DECL @ 2:1 9:1
         flags: 0
         name: test
-        0: AST_PARAM_LIST @ 4
+        0: AST_PARAM_LIST @ 4:1 4:2
         1: null
-        2: AST_STMT_LIST @ 5
-            0: AST_CALL @ 6
-                0: AST_NAME @ 6
+        2: AST_STMT_LIST @ 5:1 9:1
+            0: AST_CALL @ 6:5 8:5
+                0: AST_NAME @ 6:5 6:12
                     flags: NAME_NOT_FQ (1)
                     0: "var_dump"
-                1: AST_ARG_LIST @ 8
-                    0: AST_VAR @ 7
+                1: AST_ARG_LIST @ 6:13 8:5
+                    0: AST_VAR @ 7:9 7:12
                         0: "foo"
         3: null

@@ -30,28 +30,28 @@ echo ast_dump($ast, AST_DUMP_LINENOS);
 
 ?>
 --EXPECT--
-AST_STMT_LIST @ 1
-    0: AST_ARRAY @ 2
-        0: AST_ARRAY_ELEM @ 3
+AST_STMT_LIST @ 1:1 12:1
+    0: AST_ARRAY @ 2:1 8:1
+        0: AST_ARRAY_ELEM @ 3:1 3:1
             flags: 0
             0: 0
             1: null
-        1: AST_ARRAY_ELEM @ 5
+        1: AST_ARRAY_ELEM @ 5:1 5:1
             flags: 0
             0: 1
             1: null
-        2: AST_ARRAY_ELEM @ 7
+        2: AST_ARRAY_ELEM @ 7:1 7:1
             flags: 0
             0: 2
             1: null
-    1: AST_FUNC_DECL @ 10-12
+    1: AST_FUNC_DECL @ 10:1 12:1
         flags: 0
         name: foo
-        0: AST_PARAM_LIST @ 10
+        0: AST_PARAM_LIST @ 10:13 10:14
         1: null
-        2: AST_STMT_LIST @ 10
-            0: AST_STMT_LIST @ 11
-                0: AST_ECHO @ 11
+        2: AST_STMT_LIST @ 10:16 12:1
+            0: AST_STMT_LIST @ 11:5 11:33
+                0: AST_ECHO @ 11:10 11:32
                     0: "this is a function.
                     "
         3: null

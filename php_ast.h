@@ -32,6 +32,7 @@ ZEND_BEGIN_MODULE_GLOBALS(ast)
 	zend_string *str_children;
 	zend_string *str_docComment;
 	zend_string *str_endLineno;
+	zend_string *str_lastline;
 	void *cache_slots[AST_NUM_CACHE_SLOTS];
 ZEND_END_MODULE_GLOBALS(ast)
 
