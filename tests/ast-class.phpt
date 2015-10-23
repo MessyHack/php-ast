@@ -96,7 +96,7 @@ AST_STMT_LIST @ 1:1 24:1
                 1: null
                 2: AST_STMT_LIST @ 13:40 22:9
                     0: AST_IF @ 14:9 22:9
-                        0: AST_IF_ELEM @ 14:9 14:40
+                        0: AST_IF_ELEM @ 14:9 17:9
                             0: AST_GREATER @ 14:13 14:39
                                 0: AST_DIM @ 14:13 14:32
                                     0: AST_PROP @ 14:13 14:24
@@ -124,7 +124,7 @@ AST_STMT_LIST @ 1:1 24:1
                                         0: AST_NAME @ 16:20 16:23
                                             flags: NAME_NOT_FQ (1)
                                             0: "true"
-                        1: AST_IF_ELEM @ 17:11 17:47
+                        1: AST_IF_ELEM @ 17:11 20:9
                             0: AST_BINARY_OP @ 17:19 17:46
                                 flags: BINARY_IS_EQUAL (17)
                                 0: AST_DIM @ 17:19 17:38

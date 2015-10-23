@@ -26,11 +26,11 @@ echo ast_dump($ast, AST_DUMP_LINENOS);
 --EXPECT--
 AST_STMT_LIST @ 1:1 9:5
     0: AST_IF @ 2:1 9:5
-        0: AST_IF_ELEM @ 2:1 2:7
+        0: AST_IF_ELEM @ 2:1 9:5
             0: AST_VAR @ 2:5 2:6
                 0: "x"
             1: AST_IF @ 3:5 9:5
-                0: AST_IF_ELEM @ 3:5 3:11
+                0: AST_IF_ELEM @ 3:5 5:5
                     0: AST_VAR @ 3:9 3:10
                         0: "x"
                     1: AST_STMT_LIST @ 3:13 5:5
@@ -39,7 +39,7 @@ AST_STMT_LIST @ 1:1 9:5
                                 flags: NAME_NOT_FQ (1)
                                 0: "x"
                             1: AST_ARG_LIST @ 4:11 4:11
-                1: AST_IF_ELEM @ 5:7 5:17
+                1: AST_IF_ELEM @ 5:7 7:5
                     0: AST_VAR @ 5:15 5:16
                         0: "x"
                     1: AST_STMT_LIST @ 5:19 7:5
