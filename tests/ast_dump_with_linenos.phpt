@@ -33,7 +33,7 @@ AST_STMT_LIST @ 1:1 9:1
         0: AST_PARAM_LIST @ 4:1 4:2
         1: null
         2: AST_STMT_LIST @ 5:1 9:1
-            0: AST_CALL @ 6:5 8:5
+            0: AST_CALL @ 6:5 8:6
                 0: AST_NAME @ 6:5 6:12
                     flags: NAME_NOT_FQ (1)
                     0: "var_dump"

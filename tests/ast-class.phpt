@@ -67,7 +67,7 @@ AST_STMT_LIST @ 1:1 24:1
                         2: null
                 1: null
                 2: AST_STMT_LIST @ 7:37 8:37
-                    0: AST_ASSIGN_OP @ 8:9 8:36
+                    0: AST_ASSIGN_OP @ 8:9 8:37
                         flags: ASSIGN_ADD (23)
                         0: AST_DIM @ 8:9 8:28
                             0: AST_PROP @ 8:9 8:20
@@ -96,7 +96,7 @@ AST_STMT_LIST @ 1:1 24:1
                 1: null
                 2: AST_STMT_LIST @ 13:40 22:9
                     0: AST_IF @ 14:9 22:9
-                        0: AST_IF_ELEM @ 14:13 17:9
+                        0: AST_IF_ELEM @ 14:9 14:40
                             0: AST_GREATER @ 14:13 14:39
                                 0: AST_DIM @ 14:13 14:32
                                     0: AST_PROP @ 14:13 14:24
@@ -108,7 +108,7 @@ AST_STMT_LIST @ 1:1 24:1
                                 1: AST_VAR @ 14:36 14:39
                                     0: "num"
                             1: AST_STMT_LIST @ 14:42 17:9
-                                0: AST_ASSIGN_OP @ 15:13 15:40
+                                0: AST_ASSIGN_OP @ 15:13 15:41
                                     flags: ASSIGN_SUB (24)
                                     0: AST_DIM @ 15:13 15:32
                                         0: AST_PROP @ 15:13 15:24
@@ -119,12 +119,12 @@ AST_STMT_LIST @ 1:1 24:1
                                             0: "artnr"
                                     1: AST_VAR @ 15:37 15:40
                                         0: "num"
-                                1: AST_RETURN @ 16:20 16:23
+                                1: AST_RETURN @ 16:13 16:24
                                     0: AST_CONST @ 16:20 16:23
                                         0: AST_NAME @ 16:20 16:23
                                             flags: NAME_NOT_FQ (1)
                                             0: "true"
-                        1: AST_IF_ELEM @ 17:11 20:9
+                        1: AST_IF_ELEM @ 17:11 17:47
                             0: AST_BINARY_OP @ 17:19 17:46
                                 flags: BINARY_IS_EQUAL (17)
                                 0: AST_DIM @ 17:19 17:38
@@ -146,15 +146,15 @@ AST_STMT_LIST @ 1:1 24:1
                                                 1: "items"
                                             1: AST_VAR @ 18:32 18:37
                                                 0: "artnr"
-                                1: AST_RETURN @ 19:20 19:23
+                                1: AST_RETURN @ 19:13 19:24
                                     0: AST_CONST @ 19:20 19:23
                                         0: AST_NAME @ 19:20 19:23
                                             flags: NAME_NOT_FQ (1)
                                             0: "true"
-                        2: AST_IF_ELEM @ 20:16 22:9
+                        2: AST_IF_ELEM @ 20:11 22:9
                             0: null
                             1: AST_STMT_LIST @ 20:16 22:9
-                                0: AST_RETURN @ 21:20 21:24
+                                0: AST_RETURN @ 21:13 21:25
                                     0: AST_CONST @ 21:20 21:24
                                         0: AST_NAME @ 21:20 21:24
                                             flags: NAME_NOT_FQ (1)

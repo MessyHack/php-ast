@@ -21,7 +21,7 @@ echo ast_dump($ast, AST_DUMP_LINENOS);
 ?>
 --EXPECT--
 AST_STMT_LIST @ 1:1 4:6
-    0: AST_ARRAY @ 2:1 4:5
+    0: AST_ARRAY @ 2:1 4:6
         0: AST_ARRAY_ELEM @ 2:2 2:2
             flags: 0
             0: 0
