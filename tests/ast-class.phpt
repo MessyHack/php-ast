@@ -51,6 +51,7 @@ AST_STMT_LIST @ 1:1 24:1
                 0: AST_PROP_ELEM @ 3:9 3:14
                     0: "items"
                     1: null
+                    2: null
             1: AST_METHOD @ 7:5 9:5
                 flags: MODIFIER_PUBLIC (256)
                 name: add_item

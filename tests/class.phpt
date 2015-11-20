@@ -55,9 +55,11 @@ AST_STMT_LIST
                 0: AST_PROP_ELEM
                     0: "foo"
                     1: null
+                    2: null
                 1: AST_PROP_ELEM
                     0: "bar"
                     1: null
+                    2: null
             3: AST_METHOD
                 flags: MODIFIER_PUBLIC | MODIFIER_ABSTRACT (258)
                 name: test
